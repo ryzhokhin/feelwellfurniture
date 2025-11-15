@@ -43,10 +43,10 @@ export default function Navbar({ theme, setTheme }) {
     >
       <Link
         to="/"
-        className="text-2xl text-black dark:text-white flex items-center"
+        className="text-black dark:text-white flex flex-col items-start leading-tight"
       >
-        <span className="font-gilroy-extrabold uppercase">FEELWELL</span>
-        <span className="font-gilroy-regular lowercase">Furniture</span>
+        <span className="font-gilroy-extrabold uppercase text-2xl">FEELWELL</span>
+        <span className="font-gilroy-regular lowercase text-xl -mt-1">Furniture</span>
       </Link>
       <div className="hidden md:flex gap-6 items-center transition-all duration-300">
         {navItems.map(({ to, label }) => (
