@@ -22,9 +22,9 @@ export default function FeaturedCollection() {
   return (
     <motion.section
       ref={ref}
-      className="py-20 px-8 safari-motion-fix"
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      className="py-20 px-8"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
     >
       <div className="max-w-6xl mx-auto">
@@ -35,13 +35,22 @@ export default function FeaturedCollection() {
           {featuredItems.map((product, index) => (
             <motion.div
               key={product.id}
-              className="bg-white dark:bg-neutral-800 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden safari-motion-fix"
+              className="bg-white dark:bg-neutral-800 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              animate={
+                isInView
+                  ? { opacity: 1, y: 0, willChange: "transform, opacity" }
+                  : {}
+              }
               transition={{
                 duration: 0.5,
                 ease: [0.22, 0.61, 0.36, 1],
                 delay: index * 0.1
+              }}
+              style={{
+                transformPerspective: 1000,
+                WebkitTransformStyle: "preserve-3d",
+                backfaceVisibility: "hidden"
               }}
             >
               <Link to={`/product/${product.id}`}>
