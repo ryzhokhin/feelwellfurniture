@@ -51,7 +51,7 @@ export default function HeroSection({ theme }) {
         transition={{ duration: 1 }}
         className="relative z-10 bg-transparent rounded-2xl p-10 text-center safari-motion-fix"
       >
-        <h1 className="mb-2 text-gray-900 dark:text-gray-100 flex flex-col items-start leading-tight transform translate-x-8">
+        <h1 className="mb-2 text-gray-900 dark:text-gray-100 flex flex-col items-start leading-tight sm:translate-x-8">
           <span className="font-gilroy-extrabold uppercase text-4xl sm:text-5xl md:text-6xl">FEELWELL</span>
           <span className="font-gilroy-regular lowercase text-3xl sm:text-4xl md:text-5xl -mt-1 sm:-mt-2">Furniture</span>
         </h1>

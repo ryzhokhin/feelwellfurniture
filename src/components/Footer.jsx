@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6">
           {/* Brand Section */}
           <div className="text-center">
-            <h3 className="mb-1 text-gray-900 dark:text-gray-100 flex flex-col items-start leading-tight transform translate-x-10">
+            <h3 className="mb-1 text-gray-900 dark:text-gray-100 flex flex-col items-start leading-tight" style={{ transform: 'translateX(2.5rem)' }}>
               <span className="font-gilroy-extrabold uppercase text-xl">FEELWELL</span>
               <span className="font-gilroy-regular lowercase text-lg -mt-0.5">Furniture</span>
             </h3>
