@@ -8,9 +8,42 @@ body {
   @apply bg-white text-gray-800 font-sans;
 }
 
-/* Safari motion fix - now handled inline via Framer Motion for better control */
+/* Safari motion fix - pure CSS approach */
 .safari-motion-fix {
-  -webkit-font-smoothing: antialiased; /* eliminates flicker in text */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fade in animation - replaces Framer Motion for Safari stability */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Staggered delays for cards */
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+
+/* Isolation wrapper for elements with blend modes or opacity animations */
+.isolation-wrapper {
+  isolation: isolate;
+}
+
+/* Image rendering optimization for Safari */
+img {
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /* Gilroy Font Classes */

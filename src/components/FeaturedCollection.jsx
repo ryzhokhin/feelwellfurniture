@@ -33,25 +33,11 @@ export default function FeaturedCollection() {
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {featuredItems.map((product, index) => (
-            <motion.div
+            <div
               key={product.id}
-              className="bg-white dark:bg-neutral-800 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              animate={
-                isInView
-                  ? { opacity: 1, y: 0, willChange: "transform, opacity" }
-                  : {}
-              }
-              transition={{
-                duration: 0.5,
-                ease: [0.22, 0.61, 0.36, 1],
-                delay: index * 0.1
-              }}
-              style={{
-                transformPerspective: 1000,
-                WebkitTransformStyle: "preserve-3d",
-                backfaceVisibility: "hidden"
-              }}
+              className={`bg-white dark:bg-neutral-800 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden ${
+                isInView ? `animate-fade-in animate-delay-${index + 1}` : ''
+              }`}
             >
               <Link to={`/product/${product.id}`}>
                 <img
@@ -120,7 +106,7 @@ export default function FeaturedCollection() {
                   Buy Now →
                 </Link>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
         <div className="text-center">

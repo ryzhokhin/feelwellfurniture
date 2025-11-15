@@ -57,25 +57,11 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <motion.div
+              <div
                 key={feature.title}
-                className="bg-white dark:bg-neutral-700 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView
-                    ? { opacity: 1, y: 0, willChange: "transform, opacity" }
-                    : {}
-                }
-                transition={{
-                  duration: 0.5,
-                  ease: [0.22, 0.61, 0.36, 1],
-                  delay: index * 0.1
-                }}
-                style={{
-                  transformPerspective: 1000,
-                  WebkitTransformStyle: "preserve-3d",
-                  backfaceVisibility: "hidden"
-                }}
+                className={`bg-white dark:bg-neutral-700 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all text-center ${
+                  isInView ? `animate-fade-in animate-delay-${index + 1}` : ''
+                }`}
               >
                 <div className="flex justify-center mb-4">
                   <IconComponent 
@@ -89,7 +75,7 @@ export default function WhyChooseUs() {
                 <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </div>
