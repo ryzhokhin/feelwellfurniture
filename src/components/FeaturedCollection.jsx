@@ -22,7 +22,7 @@ export default function FeaturedCollection() {
   return (
     <motion.section
       ref={ref}
-      className="py-20 px-8"
+      className="py-20 px-8 safari-motion-fix"
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
@@ -35,7 +35,7 @@ export default function FeaturedCollection() {
           {featuredItems.map((product, index) => (
             <motion.div
               key={product.id}
-              className="bg-white dark:bg-neutral-800 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden"
+              className="bg-white dark:bg-neutral-800 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden safari-motion-fix"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{

@@ -5,3 +5,10 @@
 body {
   @apply bg-white text-gray-800 font-sans;
 }
+
+.safari-motion-fix {
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Forces GPU layer on iOS */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased; /* eliminates flicker in text */
+}

@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
   return (
     <motion.section
       ref={ref}
-      className="py-20 px-8 bg-gray-50 dark:bg-neutral-800"
+      className="py-20 px-8 bg-gray-50 dark:bg-neutral-800 safari-motion-fix"
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
             return (
               <motion.div
                 key={feature.title}
-                className="bg-white dark:bg-neutral-700 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all text-center"
+                className="bg-white dark:bg-neutral-700 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all text-center safari-motion-fix"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{

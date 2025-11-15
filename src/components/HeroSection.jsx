@@ -49,7 +49,7 @@ export default function HeroSection({ theme }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 bg-transparent rounded-2xl p-10 text-center"
+        className="relative z-10 bg-transparent rounded-2xl p-10 text-center safari-motion-fix"
       >
         <h1 className="text-5xl font-light mb-2 text-gray-900 dark:text-gray-100">FeelWellFurniture</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">Where Comfort Meets Style</p>
@@ -71,7 +71,7 @@ export default function HeroSection({ theme }) {
 
       {/* Scroll Indicator Arrow */}
       <motion.div
-        className="fixed bottom-16 left-0 right-0 z-50 pointer-events-none flex justify-center"
+        className="fixed bottom-16 left-0 right-0 z-50 pointer-events-none flex justify-center safari-motion-fix"
         initial={{ opacity: 0 }}
         animate={{ 
           opacity: showArrow ? 1 : 0,
