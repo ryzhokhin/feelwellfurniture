@@ -25,8 +25,8 @@ Before you begin, ensure you have the following installed on your system:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd feelwell-furniture
+git clone https://github.com/daanniill/feelwellfurniture
+cd feelwellfurniture
 ```
 
 ### Step 2: Install Dependencies
