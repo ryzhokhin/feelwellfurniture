@@ -51,7 +51,7 @@ export default function HeroSection({ theme }) {
         transition={{ duration: 1 }}
         className="relative z-10 bg-transparent rounded-2xl p-10 text-center safari-motion-fix"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-2 text-gray-900 dark:text-gray-100 flex items-center justify-center flex-wrap">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-2 text-gray-900 dark:text-gray-100 flex items-center justify-center whitespace-nowrap">
           <span className="font-gilroy-extrabold uppercase">FEELWELL</span>
           <span className="font-gilroy-regular lowercase">Furniture</span>
         </h1>
@@ -59,13 +59,13 @@ export default function HeroSection({ theme }) {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
           <Link
             to="/collection"
-            className="w-full sm:w-auto text-center bg-black dark:bg-white dark:text-black text-white px-8 py-3 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all font-medium"
+            className="w-auto text-center bg-black dark:bg-white dark:text-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all font-medium text-sm sm:text-base"
           >
             Explore Collection
           </Link>
           <Link
             to="/contact"
-            className="w-full sm:w-auto text-center bg-transparent border-2 border-black dark:border-white dark:text-white text-black px-8 py-3 rounded-full hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all font-medium"
+            className="w-auto text-center bg-transparent border-2 border-black dark:border-white dark:text-white text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all font-medium text-sm sm:text-base"
           >
             Get in Touch
           </Link>

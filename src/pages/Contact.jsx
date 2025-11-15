@@ -103,10 +103,10 @@ export default function Contact() {
                 <div>
                   <p className="font-medium text-gray-900 dark:text-gray-100 mb-1">Phone</p>
                   <a
-                    href="tel:949-910-7879"
+                    href="tel:888-888-8888"
                     className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                   >
-                    949-910-7879
+                    888-888-8888
                   </a>
                 </div>
               </div>
@@ -117,10 +117,10 @@ export default function Contact() {
                 <div>
                   <p className="font-medium text-gray-900 dark:text-gray-100 mb-1">Email</p>
                   <a
-                    href="mailto:clutchdev.apps@gmail.com"
+                    href="mailto:sample@gmail.com"
                     className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                   >
-                    clutchdev.apps@gmail.com
+                    sample@gmail.com
                   </a>
                 </div>
               </div>
@@ -131,12 +131,12 @@ export default function Contact() {
                 <div>
                   <p className="font-medium text-gray-900 dark:text-gray-100 mb-1">Address</p>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=9500+Gilman+Dr,+La+Jolla,+CA+92093"
+                    href="https://www.google.com/maps/search/?api=1&query=San+Francisco,+California"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                   >
-                    9500 Gilman Dr, La Jolla, CA 92093
+                    San Francisco, California
                   </a>
                 </div>
               </div>

@@ -60,16 +60,16 @@ export default function Footer() {
           {/* Contact Information */}
           <div className="text-center">
             <a
-              href="tel:949-910-7879"
+              href="tel:888-888-8888"
               className="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors block"
             >
-              949-910-7879
+              888-888-8888
             </a>
             <a
-              href="mailto:clutchdev.apps@gmail.com"
+              href="mailto:sample@gmail.com"
               className="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors block"
             >
-              clutchdev.apps@gmail.com
+              sample@gmail.com
             </a>
           </div>
 
