@@ -28,8 +28,9 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6">
           {/* Brand Section */}
           <div className="text-center">
-            <h3 className="text-xl font-light mb-1 text-gray-900 dark:text-gray-100">
-              FeelWellFurniture
+            <h3 className="text-xl mb-1 text-gray-900 dark:text-gray-100 flex items-center justify-center flex-wrap">
+              <span className="font-gilroy-extrabold uppercase">FEELWELL</span>
+              <span className="font-gilroy-regular lowercase">Furniture</span>
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300">
               Where Comfort Meets Style
@@ -74,8 +75,8 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="pt-4 border-t border-gray-200 dark:border-neutral-800">
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              © 2025 FeelWellFurniture. All rights reserved.
+            <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center flex-wrap gap-1">
+              © 2025 <span className="font-gilroy-extrabold uppercase">FEELWELL</span><span className="font-gilroy-regular lowercase">Furniture</span>. All rights reserved.
             </p>
           </div>
         </div>

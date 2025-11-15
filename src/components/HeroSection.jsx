@@ -51,7 +51,10 @@ export default function HeroSection({ theme }) {
         transition={{ duration: 1 }}
         className="relative z-10 bg-transparent rounded-2xl p-10 text-center safari-motion-fix"
       >
-        <h1 className="text-5xl font-light mb-2 text-gray-900 dark:text-gray-100">FeelWellFurniture</h1>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-2 text-gray-900 dark:text-gray-100 flex items-center justify-center flex-wrap">
+          <span className="font-gilroy-extrabold uppercase">FEELWELL</span>
+          <span className="font-gilroy-regular lowercase">Furniture</span>
+        </h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">Where Comfort Meets Style</p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
           <Link
