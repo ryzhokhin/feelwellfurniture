@@ -1,0 +1,96 @@
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+
+export default function HeroSection({ theme }) {
+  const [showArrow, setShowArrow] = useState(true);
+  const sectionRef = useRef(null);
+
+  // Scroll to top when component mounts/fades in
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  // Check if HeroSection is visible and handle arrow visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      const scrollPosition = window.scrollY;
+
+      // Show arrow if HeroSection is fully visible or if scrolled back to top
+      if (isVisible || scrollPosition < 100) {
+        setShowArrow(true);
+      } else {
+        setShowArrow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Also check on initial load
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`relative h-screen flex items-center justify-center overflow-hidden ${
+        theme === "dark" 
+          ? "bg-gradient-to-b from-neutral-700 to-neutral-900" 
+          : "bg-gradient-to-b from-[#c3c2bf] to-white"
+      }`}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 bg-transparent rounded-2xl p-10 text-center"
+      >
+        <h1 className="text-5xl font-light mb-2 text-gray-900 dark:text-gray-100">FeelWellFurniture</h1>
+        <p className="text-gray-700 dark:text-gray-300 mb-6">Where Comfort Meets Style</p>
+        <div className="flex justify-center gap-4 mt-8">
+          <Link
+            to="/collection"
+            className="bg-black dark:bg-white dark:text-black text-white px-8 py-3 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all font-medium"
+          >
+            Explore Collection
+          </Link>
+          <Link
+            to="/contact"
+            className="bg-transparent border-2 border-black dark:border-white dark:text-white text-black px-8 py-3 rounded-full hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all font-medium"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </motion.div>
+
+      {/* Scroll Indicator Arrow */}
+      <motion.div
+        className="fixed bottom-16 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ 
+          opacity: showArrow ? 1 : 0,
+          y: showArrow ? [0, 10, 0] : 0
+        }}
+        transition={{
+          opacity: { duration: 0.3 },
+          y: {
+            duration: 1.5,
+            repeat: showArrow ? Infinity : 0,
+            ease: "easeInOut"
+          }
+        }}
+      >
+        <ChevronDown 
+          size={32} 
+          className="text-gray-600 dark:text-gray-300"
+        />
+      </motion.div>
+    </section>
+  );
+}
